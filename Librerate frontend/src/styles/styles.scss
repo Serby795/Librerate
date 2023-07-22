@@ -1,0 +1,38 @@
+@import 'header';
+@import 'mixins';
+@import 'register';
+@import 'login';
+@import 'footer';
+@import './abstract/variables';
+@import 'advancedSearch';
+@import 'home';
+
+//Bootstrap
+
+@import '~/bootstrap/scss/_functions.scss';
+@import '~/bootstrap/scss/_variables.scss';
+@import '~/bootstrap/scss/_mixins.scss';
+
+//Bootstrap map amends
+@import './abstract/map-amends';
+
+// //Boostrap import
+@import '~/bootstrap/scss/bootstrap';
+
+body{
+    background-color: $customBackground;
+    box-sizing: border-box;
+    margin:0;
+    padding:0; 
+    
+    .root{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;    
+    }
+
+    .mainContent{
+        min-height: 65vh;
+    }
+}
+

@@ -1,0 +1,72 @@
+@import '_mixins';
+@import './abstract/variables';
+
+.advancedSearchContainer{
+    background-color: #fff;
+    @include display-flex-custom(flex-start, center, row);
+    height: 68vh;
+    width: 100%;
+
+
+    .advancedSearch{
+        border: 1px solid $customRed;
+        border-radius: 2%;
+        @include display-column-center;
+        margin-top: 2rem;
+        padding: 1rem;
+        height: 55vh;
+        width: 40%;
+        
+
+        .searchTitle{
+            color: black;
+            padding: .5rem;
+        
+        }
+
+        .hr{
+            align-self: self-start;
+            color: $customRed;
+            width: 100%;
+        }
+
+        .advancedSearchForm{
+
+            height: 85%;
+            @include display-flex-custom(flex-start, center, column);
+            
+
+            .inputDataContainer{
+                margin: .3rem;
+                height: 4rem;
+                width: 100%;
+                
+                .inputData{
+                    border-radius: .4rem;
+                    height: 2rem;
+                    width: 100%;
+                }
+                .inputData:focus{
+                    outline: none;
+                }
+
+                .inputDataSelect{
+                    width: 100%;
+                }
+            }
+
+            .searchButton{
+                color: #fff;
+                font-weight: bold;
+            }
+    
+        }
+
+
+        
+
+    }
+}
+
+
+

@@ -1,0 +1,109 @@
+@import '_mixins';
+@import './abstract/variables';
+
+
+.registerContainer {
+    
+   
+    height: 68vh;
+    @include display-flex-custom(center, center, column);
+    padding: 1rem;
+    background-color: #fff;
+    width: 100%;
+
+    .registerForm {
+        border: 1px solid $customRed;
+        border-radius: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-grow: 1;
+        margin-top: 1rem;
+        padding: 1rem 3rem;
+        width: 40%;
+        height: 55vh;
+        
+        .registerTitle {
+            color: black;
+            padding: .5rem;
+            text-align: center;
+        }
+        
+        .hr{
+            color: $customRed;
+        }
+
+        .registerLabel{
+            font-size: 1.2rem;
+        }
+
+        .linkTo{
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    }
+}
+
+
+Link,
+Link:visited {
+    color: #fff;
+}
+
+input[type="text"],
+input[type="password"],
+button,
+textarea {
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    
+    border-radius: 0.5rem;
+}
+
+
+.instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.25rem;
+    position: relative;
+    bottom: -10px;
+}
+
+.instructions>svg {
+    margin-right: 0.25rem;
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.hide {
+    display: none;
+}
+
+.valid {
+    color: limegreen;
+    margin-left: 0.25rem;
+}
+
+.invalid {
+    color: red;
+    margin-left: 0.25rem;
+}
+
+.errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.line {
+    display: inline-block;
+}

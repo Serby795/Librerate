@@ -1,0 +1,62 @@
+@import '_mixins';
+@import './abstract/variables';
+
+
+.headerContainer{
+    @include display-column-center;
+    height: 12vh;
+    
+    .headerUp {
+        background-color: $customBackground;
+        height: 50%;
+        @include display-row-space;
+        width: 100%;
+
+
+        .linkLogo{
+
+            margin-left: .5rem;
+            width: 200px;
+            .logo{
+                width: 100%;
+            }
+        }
+
+        .logIn-RegisterButtons{
+            
+            .logIn-Register{
+                margin: 0 .5rem;
+
+                
+                .linkTo{
+                    color: #fff;
+                    font-weight: bolder;
+                    text-decoration: none;
+                }
+            }
+            .linkTo{
+                color: #fff;
+                font-weight: bolder;
+                text-decoration: none;
+            }
+        }
+    }
+    
+    .headerDown{
+        background-color: $customYellow;
+        height: 50%;
+        @include display-flex-center;
+        width: 100%;
+    }
+}
+
+
+
+
+.headerLink{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    margin:0rem 1rem;
+    text-decoration: none;
+}

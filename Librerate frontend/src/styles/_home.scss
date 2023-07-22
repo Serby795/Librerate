@@ -1,0 +1,83 @@
+@import "abstract/_variables.scss";
+@import "_mixins.scss";
+
+
+.mainContainer {
+
+    //si quieres cambiar el background negro, tienes la variable en abstract/variables
+    background: $customBackground;
+    padding: 2rem;
+    //height: 68vh;
+
+    //esto es un mixin, en los parámetros le das primero el align-item (vertical), luego el justify-content (horizontal) y el ultimo es el flex-direction
+    @include display-flex-custom(center, flex-start, row);
+    flex-wrap: wrap;
+
+    //esto es toda la tarjeta
+    .book {
+        background-color: #ffffff;
+        height: 20rem;
+        width: calc(20% - 2rem);
+        margin: 1rem;
+
+        //aquí editas la imagen de la portada del libro
+        .portada {}
+
+        //aquí editas título del libro
+        .tituloLibro {
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        //aquí editas los datos del libro
+        .datosLibro {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        //aquí editas el texto del botón "leer"
+        .linkTo {
+
+            padding: 0.5rem 1rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+
+            a {
+                padding: 0.5rem 1rem;
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+        }
+
+        .btn.border-dark:hover {
+            background-color: #000000;
+            color: #fff;
+        }
+    }
+
+    // Ajustamos el ancho de los libros en caso de haber menos de 5 por fila
+    @media (max-width: 1024px) {
+        .book {
+            width: calc(25% - 2rem);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .book {
+            width: calc(33.33% - 2rem);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .book {
+            width: calc(50% - 2rem);
+        }
+    }
+}

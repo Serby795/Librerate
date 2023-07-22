@@ -1,0 +1,27 @@
+@import './abstract/variables';
+
+@mixin display-flex-center{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+@mixin display-flex-custom ($align, $justify, $flex-direction){
+    align-items: $align;
+    flex-direction: $flex-direction;
+    display: flex;
+    justify-content: $justify;
+}
+
+@mixin display-column-center{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin display-row-space{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}

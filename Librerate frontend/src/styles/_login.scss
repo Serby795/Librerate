@@ -1,0 +1,108 @@
+@import '_mixins';
+@import './abstract/variables';
+
+.logInContainer{
+    height: 68vh;
+    @include display-flex-custom(center, flex-start, column);
+    background-color: #fff;
+    padding-top: 1.5rem;
+    width: 100%;
+
+    .loginForm{
+        border: 1px solid $customRed;
+        border-radius: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 33vh;
+        width: 35%;
+
+        .loginTitle{
+            color: black;
+            text-align: center;
+            margin: 1rem;
+        }
+
+        .hr{
+            color: $customRed;
+        }
+        
+        .loginLabel{
+            color: black;
+            margin: 1rem 2rem;
+        }
+
+        .loginInput{
+            border-radius: .4rem;
+            height: 2rem;
+            margin: 0 2rem;
+            width: 88%;
+        }
+
+        .linkTo{
+            margin: 3rem 2rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            width: 88%;
+        }
+        
+    }
+}
+.loginLink, .loginLink:visited {
+    color: $customRed;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.goToRegister{
+    margin-top: 1rem;
+    @include display-flex-custom(center, center, column);
+}
+
+.instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.25rem;
+    position: relative;
+    bottom: -10px;
+}
+
+.instructions > svg {
+    margin-right: 0.25rem;
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.hide {
+    display: none;
+}
+
+.valid {
+    color: limegreen;
+    margin-left: 0.25rem;
+}
+
+.invalid {
+    color: red;
+    margin-left: 0.25rem;
+}
+
+.errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+

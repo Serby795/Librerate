@@ -1,0 +1,8 @@
+//Create a map
+
+
+$custom-colors: (
+    "customRed": $customRed
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
